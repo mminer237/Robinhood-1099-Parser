@@ -9,7 +9,7 @@ class Sales2020(SalesInterface):
     columns = ["description", "sold_date", "quantity", "proceeds", "acquired_date", "cost", "wash_sales_loss", "gain_loss"]
 
     _comma_number_pat = "\d?\d?\d(,\d\d\d)*"
-    _date_pat = "\d\d\/\d\d\/\d\d"
+    _date_pat = "\d\d\/\d\d\/\d\d|Various"
 
     _date_pattern = re.compile(f"^{_date_pat}$")
     _quantity_pattern = re.compile(f"^{_comma_number_pat}\.\d+$")
